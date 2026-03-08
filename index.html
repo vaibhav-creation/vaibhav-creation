@@ -1,224 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vaibhav Creation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Creation | Cinematic Shoot & Video Editing</title>
+<meta name="description" content="Vaibhav Creation - Professional Cinematic Shoots, Wedding Reels, Event Videos and Creative Video Editing.">
 
+<style>
 body{
-font-family:Arial;
 margin:0;
-background:#0f0f0f;
+font-family:Arial, Helvetica, sans-serif;
 color:white;
-text-align:center;
+background:linear-gradient(270deg,#ff512f,#dd2476,#1fa2ff,#ff512f);
+background-size:800% 800%;
+animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
 header{
-background:#111;
-padding:60px;
+padding:60px 20px;
+text-align:center;
 }
 
 h1{
 font-size:40px;
+margin:0;
+}
+
+h2{
+margin-top:40px;
+}
+
+.section{
+padding:40px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:20px;
+border-radius:12px;
+backdrop-filter:blur(6px);
+transition:transform .3s;
+}
+
+.card:hover{
+transform:scale(1.05);
 }
 
 .button{
 display:inline-block;
 padding:12px 25px;
-background:#ff004f;
+background:#ff2e63;
 color:white;
+border-radius:25px;
 text-decoration:none;
+margin-top:20px;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.1);
+background:#ff0055;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:10px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+input,textarea{
+padding:10px;
 border-radius:6px;
-margin:10px;
-}
-
-.section{
-padding:50px;
-}
-
-.service{
-background:#1c1c1c;
-padding:20px;
-margin:10px;
-border-radius:10px;
-display:inline-block;
-width:220px;
-}
-
-.review{
-background:#1c1c1c;
-padding:20px;
-margin:10px;
-border-radius:10px;
-}
-
-.price{
-background:#1c1c1c;
-padding:20px;
-margin:10px;
-border-radius:10px;
-display:inline-block;
-width:230px;
+border:none;
 }
 
 footer{
-background:#111;
-padding:20px;
-margin-top:40px;
+text-align:center;
+padding:30px;
+font-size:14px;
 }
 
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+.video-bg{
+position:relative;
+height:60vh;
+overflow:hidden;
+}
+
+.video-bg video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.video-text{
+position:relative;
+z-index:2;
+text-align:center;
+padding-top:120px;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="video-bg">
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-wedding-couple-5176/1080p.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="video-text">
 <h1>Vaibhav Creation</h1>
-  <h2>Professional Video Editor & Cinematic Shooter</h2>
-
-<p>
-I create cinematic wedding films, reels and professional videos for businesses and events.
-My goal is to capture beautiful moments and turn them into creative cinematic stories.
-</p>
-<p>Reels | Wedding Shoot | Video Editing | Business Promotion</p>
-
-<a class="button" href="https://www.instagram.com/vaibhav_creation227?igsh=MWJtZXlwajRqMHY2Yw==">Instagram</a>
-
-<a class="button" href="https://www.facebook.com/share/1B49bzYkDB/">Facebook</a>
-
-<a class="button" href="https://wa.me/916265269620">WhatsApp Booking</a>
-
-</header>
-
+<p>Cinematic Shoot | Professional Video Editing</p>
+<a class="button" href="#contact">Book Your Shoot</a>
+</div>
+</div>
 
 <div class="section">
-
-<h2>Our Services</h2>
-
-<ul style="list-style:none; padding:0; font-size:18px; line-height:32px;">
-
-<li>🚗 New Car Delivery Reels</li>
-<li>💍 Wedding Cinematic Reels</li>
-<li>🎬 Cinematic Videos</li>
-<li>🏛 Political Reels</li>
-<li>🎂 Birthday Reels</li>
-<li>🏫 School Advertising</li>
-<li>🤰 Maternity Shoot</li>
-<li>💑 Pre-Wedding Shoot</li>
-<li>🏠 Home Interior Video</li>
-<li>🏪 Shop Advertising</li>
-<li>📸 Candid Cinematic Shoot</li>
-<li>🎉 All Festival Reels</li>
-
-</ul>
-
-<p style="font-size:20px; margin-top:15px;"><b>✔ All Types of Shoot Available</b></p>
-
-<p style="max-width:700px; margin:auto;">
-We turn your special moments into cinematic memories with professional quality and creative touch.
-</p>
-
-</div>
-  
-<p>
-We turn your special moments into cinematic memories with professional quality and creative touch.
-</p>
-<div class="service">Wedding Cinematic Shoot</div>
-<div class="service">Birthday Reel Shoot</div>
-<div class="service">Business Promotion Reels</div>
-<div class="service">Event Video Coverage</div>
-
-</div>
-
-
-<div class="section">
-<h2>Price Packages</h2>
-
-<div class="price">
-<h3>Basic</h3>
-<p>₹2999</p>
-<p>1 Reel Video</p>
-</div>
-
-<div class="price">
-<h3>Standard</h3>
-<p>₹5999</p>
-<p>3 Reel Videos</p>
-</div>
-
-<div class="price">
-<h3>Wedding</h3>
-<p>₹15000+</p>
-<p>Full Wedding Coverage</p>
-</div>
-
-</div>
-
-
-<div class="section">
-
 <h2>About Me</h2>
-
 <p>
 My name is Vaibhav and I am a professional video editor and shooter.
 I specialize in cinematic wedding videos, reels editing and event shooting.
-</p>
-
-<p>
 With creative editing and professional shooting techniques,
 I help people and businesses create high quality video content.
 </p>
-
 </div>
 
 <div class="section">
-
-<h2>Portfolio</h2>
-<h3>My Work</h3>
-
-<p>
-Here you can watch some of my cinematic shoots and edited reels.
-I focus on creative storytelling, smooth transitions and high quality visuals.
-</p>
-
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">New Car Delivery Reels</div>
+<div class="card">Wedding Cinematic Reels</div>
+<div class="card">Cinematic Videos</div>
+<div class="card">Political Reels</div>
+<div class="card">Birthday Reels</div>
+<div class="card">School Advertising</div>
+<div class="card">Maternity Shoot</div>
+<div class="card">Pre-Wedding Shoot</div>
+<div class="card">Home Interior Video</div>
+<div class="card">Shop Advertising</div>
+<div class="card">Candid Cinematic Shoot</div>
+<div class="card">Festival Reels</div>
+</div>
+<p style="margin-top:20px">✔ All Types of Shoot Available. We turn your special moments into cinematic memories with professional quality and creative touch.</p>
 </div>
 
 <div class="section">
+<h2>Instagram Reels</h2>
+<p>Watch some of my latest cinematic edits.</p>
+<div class="gallery">
 
-<h2>Contact</h2>
-
-<p>Phone: 6265269620</p>
-<p>Instagram: vaibhav_creation227</p>
-<p>Available for Wedding, Events and Business Shoots.</p>
-
-</div>
+<iframe src="https://www.instagram.com/reel/DRrvSmaE2cv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DUPyclukxZ1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DQUXBpwk7hu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DPgnKFbE1nS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DRYforKk7im/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DSHsEtUE--m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DTvBZnfkwd-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
+<iframe src="https://www.instagram.com/reel/DUdjgicE68D/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></iframe>
   
-<div class="section">
-<h2>Client Reviews</h2>
-
-<div class="review">⭐⭐⭐⭐⭐ Amazing video quality</div>
-<div class="review">⭐⭐⭐⭐⭐ Best reels creator</div>
-<div class="review">⭐⭐⭐⭐⭐ Professional shooting</div>
-<div class="review">⭐⭐⭐⭐⭐ Fast delivery</div>
-<div class="review">⭐⭐⭐⭐⭐ Great cinematic work</div>
-<div class="review">⭐⭐⭐⭐⭐ Highly recommended</div>
-
+</div>
 </div>
 
-
-<div class="section">
-<h2>Location</h2>
-
-<iframe src="https://maps.google.com/maps?q=zirapur%20madhya%20pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="90%" height="300"></iframe>
-
+<div class="section" id="contact">
+<h2>Book a Shoot</h2>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<textarea id="message" placeholder="Shoot Details"></textarea>
+<button class="button" type="submit">Send Booking</button>
+</form>
 </div>
-
 
 <footer>
-
-<p>© 2026 Vaibhav Creation</p>
-
+Phone: 6265269620 | Instagram: vaibhav_creation227<br>
+Available for Wedding, Events and Business Shoots
 </footer>
+
+<a class="whatsapp" href="https://wa.me/916265269620">WhatsApp</a>
+
+<script>
+function sendToWhatsApp(){
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var message=document.getElementById("message").value;
+
+var url="https://wa.me/916265269620?text="
++"Name: "+name+"%0a"
++"Phone: "+phone+"%0a"
++"Details: "+message;
+
+window.open(url,'_blank');
+}
+</script>
 
 </body>
 </html>
