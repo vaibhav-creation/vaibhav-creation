@@ -64,6 +64,24 @@ animation:gradient 10s ease infinite;
 100%{background-position:0% 50%}
 }
 
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#reels">Reels</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#location">Location</a></li>
+
+</ul>
+
+</div>
+
 /* HERO */
 
 .hero{
@@ -152,24 +170,25 @@ border-radius:25px;
 cursor:pointer;
 }
 
-.social-icons{
-margin-top:20px;
-display:flex;
-justify-content:center;
-align-items:center;
-}
+<div class="social-icons">
 
-.social-icons a{
-color:white;
-font-size:28px;
-margin:0 15px;
-transition:0.3s;
-}
+<a href="https://www.instagram.com/vaibhav_creation227?igsh=MWJtZXlwajRqMHY2Yw==" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
-.social-icons a:hover{
-color:#ff0066;
-transform:scale(1.2);
-}
+<a href="https://www.facebook.com/share/1DsdN5V1H5/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://www.youtube.com/@VaibhavCreation227" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+
+<a href="https://wa.me/916265209620" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
 
 /* PRICING SECTION */
 
@@ -220,6 +239,82 @@ background:rgba(0,0,0,0.6);
 margin-top:40px;
 }
 
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:center;
+z-index:1000;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+padding:15px 0;
+}
+
+.navbar li{
+margin:0 25px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#ff0066;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:32px;
+padding:15px;
+border-radius:50%;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.15);
+background:#1ebe5d;
+}
+
+/* FLOATING INSTAGRAM */
+
+.instagram-float{
+position:fixed;
+bottom:90px;
+right:25px;
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+color:white;
+font-size:30px;
+padding:14px;
+border-radius:50%;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+z-index:1000;
+transition:0.3s;
+}
+
+.instagram-float:hover{
+transform:scale(1.15);
+}
+
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -254,7 +349,7 @@ margin-top:40px;
 
   <!-- OUR SERVICES -->
 
-<section>
+<section id="services">
 
 <h2>Our Services</h2>
 
@@ -287,7 +382,7 @@ margin-top:40px;
 
 <!-- PRICING -->
 
-<section>
+<section id="packages">
 
 <h2>Our Packages</h2>
 
@@ -344,7 +439,7 @@ margin-top:40px;
 
 <!-- INSTAGRAM REELS -->
 
-<section>
+<section id="reels">
 
 <h2>Instagram Reels</h2>
 
@@ -365,7 +460,7 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/?utm_source=i
 
 <!-- CLIENT REVIEWS -->
 
-<section>
+<section id="reviews">
 
 <h2>Client Reviews</h2>
 
@@ -413,15 +508,15 @@ Professional editing and creative reels.
 </section>
   
 
-<section>
+<section id="location">
 
 <h2>Our Location</h2>
 
 <iframe 
 src="https://www.google.com/maps?q=Zirapur%20Madhya%20Pradesh&output=embed"
 width="90%" 
-height="350" 
-style="border:0; border-radius:15px;" 
+height="350"
+style="border:0; border-radius:15px;"
 loading="lazy">
 </iframe>
 
@@ -442,7 +537,7 @@ var name=document.getElementById("name").value;
 var phone=document.getElementById("phone").value;
 var message=document.getElementById("message").value;
 
-var url="https://wa.me/917415146049?text="
+var url="https://wa.me/916265209620?text="
 +"Name: "+name+"%0a"
 +"Phone: "+phone+"%0a"
 +"Shoot Details: "+message;
@@ -454,6 +549,14 @@ window.open(url,'_blank');
 </script>
 
 <script async src="//www.instagram.com/embed.js"></script>
+
+<a href="https://www.instagram.com/vaibhav_creation227" class="instagram-float" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/916265209620?text=Hello%20Vaibhav%20Creation,%20I%20am%20interested%20in%20your%20video%20shoot%20services.%20Please%20share%20details." class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
