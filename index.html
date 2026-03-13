@@ -52,6 +52,27 @@ font-family:Arial;
 /* ANIMATED BACKGROUND */
 
 body{
+
+<div class="navbar">
+
+<div class="logo">Vaibhav Creation</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#reels">Reels</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#location">Location</a></li>
+
+</ul>
+
+</div>
+
+  
 color:white;
 background:linear-gradient(-45deg,#000000,#1a0033,#330033,#000000);
 background-size:400% 400%;
@@ -268,34 +289,59 @@ margin-top:40px;
 .navbar{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(8px);
+background:black;
 display:flex;
-justify-content:center;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
 z-index:1000;
 }
 
-.navbar ul{
+.nav-links{
 display:flex;
 list-style:none;
-padding:15px 0;
 }
 
-.navbar li{
-margin:0 25px;
+.nav-links li{
+margin-left:20px;
 }
 
-.navbar a{
+.nav-links a{
 color:white;
 text-decoration:none;
 font-size:18px;
-transition:0.3s;
 }
 
-.navbar a:hover{
-color:#ff0066;
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:black;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
 }
 
 /* FLOATING WHATSAPP */
@@ -522,7 +568,7 @@ Professional editing and creative reels.
 
 <!-- WHATSAPP FORM -->
 
-<section id="contact">
+<section id="contact"> 
 
 <h2>Book Your Shoot</h2>
 
@@ -613,6 +659,14 @@ window.open(url,'_blank');
 <a href="https://wa.me/916265209620?text=Hello%20Vaibhav%20Creation,%20I%20am%20interested%20in%20your%20video%20shoot%20services.%20Please%20share%20details." class="whatsapp-float" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("show");
+}
+
+</script>
 
 </body>
 </html>
