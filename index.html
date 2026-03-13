@@ -197,6 +197,30 @@ gap:10px;
 text-align:left;
 }
 
+/* STATS COUNTER */
+
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.stat-box{
+background:white;
+padding:25px;
+border-radius:15px;
+width:200px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.stat-box h2{
+font-size:40px;
+color:#ff0066;
+}
+
 /* PRICING */
 
 .pricing{
@@ -365,6 +389,26 @@ font-size:16px;
 padding:12px 25px;
 }
 
+.mode-btn{
+border:none;
+background:none;
+font-size:22px;
+cursor:pointer;
+}
+
+.dark{
+background:#111;
+color:white;
+}
+
+.dark .service-box,
+.dark .review,
+.dark .price-box,
+.dark .stat-box{
+background:#222;
+color:white;
+}
+
 }
   
 </style>
@@ -380,6 +424,7 @@ padding:12px 25px;
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<button onclick="toggleMode()" class="mode-btn">🌙</button>
 
 <ul class="nav-links">
 <li><a href="#">Home</a></li>
@@ -447,6 +492,25 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 
 </div>
 
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-box">
+<h2 id="reels">0</h2>
+<p>🎥 250+ Reels Created</p>
+</div>
+
+<div class="stat-box">
+<h2 id="wedding">0</h2>
+<p>💍 50+ Wedding Shoots</p>
+</div>
+
+<div class="stat-box">
+<h2 id="clients">0</h2>
+<p>😊 200+ Happy Clients</p>
 </div>
 
 </section>
@@ -675,9 +739,44 @@ document.getElementById("imgModal").style.display="none";
 
 }
 
-</script>
+
+/* COUNTER */
+
+let reels=0;
+let wedding=0;
+let clients=0;
+
+let interval=setInterval(()=>{
+
+if(reels<250){
+reels++;
+document.getElementById("reels").innerText=reels+"+";
+}
+
+if(wedding<50){
+wedding++;
+document.getElementById("wedding").innerText=wedding+"+";
+}
+
+if(clients<200){
+clients++;
+document.getElementById("clients").innerText=clients+"+";
+}
+
+if(reels==250 && wedding==50 && clients==200){
+clearInterval(interval);
+}
+
+},20);
+
+/* DARK MODE */
+
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
 
 <script async src="//www.instagram.com/embed.js"></script>
-
+  
+  
 </body>
 </html>
