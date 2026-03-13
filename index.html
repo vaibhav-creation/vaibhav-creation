@@ -9,8 +9,6 @@
 
 <meta name="description" content="Vaibhav Creation - Professional Wedding Videography, Pre Wedding Shoot, Cinematic Reels, Video Editing in Zirapur.">
 <meta name="keywords" content="Wedding Videographer Zirapur, Pre Wedding Shoot Zirapur, Video Editing Zirapur, Vaibhav Creation">
-<meta name="author" content="Vaibhav Creation">
-<meta name="robots" content="index, follow">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
@@ -100,6 +98,29 @@ border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
+/* PACKAGES */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.package{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.price{
+font-size:28px;
+color:#ff0066;
+margin-top:10px;
+}
+
 /* GALLERY */
 
 .gallery{
@@ -133,39 +154,6 @@ border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-/* BOOKING */
-
-.booking input,
-.booking textarea{
-width:90%;
-padding:12px;
-margin:8px;
-border-radius:8px;
-border:none;
-}
-
-.booking button{
-padding:12px 25px;
-background:green;
-color:white;
-border:none;
-border-radius:25px;
-cursor:pointer;
-}
-
-/* MAP */
-
-.map iframe{
-border-radius:15px;
-}
-
-/* VISITOR */
-
-.counter{
-font-size:20px;
-margin-top:10px;
-}
-
 /* PAYMENT */
 
 .payment-box{
@@ -177,7 +165,7 @@ border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* FLOATING WHATSAPP */
+/* FLOATING BUTTONS */
 
 .whatsapp{
 position:fixed;
@@ -187,7 +175,19 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:28px;
+font-size:26px;
+text-decoration:none;
+}
+
+.instagram{
+position:fixed;
+bottom:90px;
+right:25px;
+background:#E1306C;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:26px;
 text-decoration:none;
 }
 
@@ -220,12 +220,12 @@ max-height:90%;
 
 <div class="navbar">
 
-<div>Vaibhav Creation</div>
+<div><b>Vaibhav Creation</b></div>
 
 <div>
 <a href="#">Home</a>
 <a href="#services">Services</a>
-<a href="#reels">Reels</a>
+<a href="#packages">Packages</a>
 <a href="#gallery">Gallery</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
@@ -276,26 +276,33 @@ Turning Moments into Cinematic Stories
 
 </section>
 
-<!-- INSTAGRAM REELS -->
+<!-- PRICE PACKAGES -->
 
-<section id="reels">
+<section id="packages">
 
-<h2>Instagram Reels</h2>
+<h2>Our Packages</h2>
 
-<div class="gallery">
+<div class="packages">
 
-<blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DRrvSmaE2cv/"></blockquote>
-
-<blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVi2sDaDBux/"></blockquote>
-
-<blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquote>
-
+<div class="package">
+<h3>Video Editing</h3>
+<div class="price">₹500+</div>
+<p>Professional Reel Editing</p>
 </div>
 
-<script async src="//www.instagram.com/embed.js"></script>
+<div class="package">
+<h3>Birthday Reel</h3>
+<div class="price">₹1500+</div>
+<p>Cinematic Birthday Shoot</p>
+</div>
+
+<div class="package">
+<h3>Pre Wedding</h3>
+<div class="price">₹7000+</div>
+<p>Full Cinematic Pre Wedding</p>
+</div>
+
+</div>
 
 </section>
 
@@ -307,16 +314,16 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquot
 
 <div class="gallery">
 
-<img src="photo1.jpg.jpg" onclick="openImg(this)">
-<img src="photo2.jpg.jpg" onclick="openImg(this)">
-<img src="photo3.jpg.jpg" onclick="openImg(this)">
-<img src="photo4.jpg.jpg" onclick="openImg(this)">
+<img src="photo1.jpg" onclick="openImg(this)">
+<img src="photo2.jpg" onclick="openImg(this)">
+<img src="photo3.jpg" onclick="openImg(this)">
+<img src="photo4.jpg" onclick="openImg(this)">
 
 </div>
 
 </section>
 
-<!-- CLIENT REVIEWS -->
+<!-- REVIEWS -->
 
 <section id="reviews">
 
@@ -332,42 +339,21 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquot
 
 </section>
 
-<!-- GOOGLE REVIEWS -->
-
-<section>
-
-<h2>Leave a Google Review</h2>
-
-<a href="https://search.google.com/local/writereview"
-style="background:#ff0066;color:white;padding:15px 30px;border-radius:30px;text-decoration:none;">
-⭐ Write Review on Google
-</a>
-
-</section>
-
 <!-- BOOKING -->
 
 <section id="contact">
 
 <h2>Book Your Shoot</h2>
 
-<div class="booking">
-
-<input type="text" id="name" placeholder="Your Name">
-
-<input type="text" id="phone" placeholder="Phone Number">
-
-<textarea id="msg" placeholder="Event Details"></textarea>
-
-<br>
+<input type="text" id="name" placeholder="Your Name"><br><br>
+<input type="text" id="phone" placeholder="Phone Number"><br><br>
+<textarea id="msg" placeholder="Event Details"></textarea><br><br>
 
 <button onclick="sendWhatsApp()">Send Booking</button>
 
-</div>
-
 </section>
 
-<!-- ONLINE PAYMENT -->
+<!-- PAYMENT QR -->
 
 <section>
 
@@ -375,7 +361,7 @@ style="background:#ff0066;color:white;padding:15px 30px;border-radius:30px;text-
 
 <div class="payment-box">
 
-<p>Pay Advance ₹500 to confirm your shoot</p>
+<p>Scan QR to Pay Advance</p>
 
 <img src="upi-qr.png" width="220">
 
@@ -385,44 +371,9 @@ style="background:#ff0066;color:white;padding:15px 30px;border-radius:30px;text-
 
 </section>
 
-<!-- MAP -->
+<!-- FLOATING BUTTONS -->
 
-<section class="map">
-
-<h2>Our Studio Location</h2>
-
-<iframe src="https://www.google.com/maps?q=Zirapur%20Madhya%20Pradesh&output=embed"
-width="90%" height="350"></iframe>
-
-<br><br>
-
-<a href="tel:6265269620"
-style="background:green;color:white;padding:12px 25px;border-radius:25px;text-decoration:none;">
-📞 Call Now
-</a>
-
-<a href="https://maps.google.com/?q=Zirapur%20Madhya%20Pradesh"
-style="background:#ff6600;color:white;padding:12px 25px;border-radius:25px;text-decoration:none;">
-🧭 Get Directions
-</a>
-
-</section>
-
-<!-- VISITOR COUNTER -->
-
-<section>
-
-<h2>Website Visitors</h2>
-
-<div class="counter">
-
-Visitors: <span id="visits"></span>
-
-</div>
-
-</section>
-
-<!-- WHATSAPP -->
+<a class="instagram" href="https://www.instagram.com/vaibhav_creation227">📸</a>
 
 <a class="whatsapp" href="https://wa.me/916265269620">💬</a>
 
@@ -455,14 +406,6 @@ var url="https://wa.me/916265269620?text="
 window.open(url);
 
 }
-
-let count=localStorage.getItem("visits");
-
-if(count==null){count=1;} else{count++;}
-
-localStorage.setItem("visits",count);
-
-document.getElementById("visits").innerText=count;
 
 </script>
 
