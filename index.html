@@ -46,6 +46,10 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 z-index:1000;
 }
 
+.logo-box img{
+height:45px;
+}
+
 .nav-links{
 display:flex;
 list-style:none;
@@ -371,20 +375,19 @@ padding:12px 25px;
 
 <div class="navbar">
 
-<div style="font-weight:bold;">VC</div>
+<div class="logo-box">
+<img src="logo.png" alt="Vaibhav Creation Logo">
+</div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <ul class="nav-links">
-
 <li><a href="#">Home</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#packages">Packages</a></li>
 <li><a href="#reels">Reels</a></li>
 <li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a href="#location">Location</a></li>
-
 </ul>
 
 </div>
