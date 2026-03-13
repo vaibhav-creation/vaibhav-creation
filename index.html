@@ -404,6 +404,28 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 
 </section>
 
+<!-- PAYMENT -->
+
+<section id="payment">
+
+<h2>Advance Booking Payment</h2>
+
+<div style="background:white;padding:30px;border-radius:15px;max-width:400px;margin:auto;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+
+<p>Scan QR to Pay Advance</p>
+
+<img src="upi-qr.jpeg" width="220">
+
+<p><b>UPI ID:</b> 6265269620-2@axl</p>
+
+<p>After payment send screenshot on WhatsApp</p>
+
+<a href="https://wa.me/916265269620" class="button">Send Payment Screenshot</a>
+
+</div>
+
+</section>
+
 <!-- INSTAGRAM REELS -->
 
 <section id="reels">
@@ -424,6 +446,31 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquot
 </div>
 
 </section>
+
+<!-- PHOTO GALLERY -->
+
+<section id="gallery">
+
+<h2>Photo Gallery</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg.jpg" onclick="openImg(this)">
+<img src="photo2.jpg.jpg" onclick="openImg(this)">
+<img src="photo3.jpg.jpg" onclick="openImg(this)">
+<img src="photo4.jpg.jpg" onclick="openImg(this)">
+
+</div>
+
+</section>
+
+<!-- FULL SCREEN IMAGE -->
+
+<div id="imgModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;justify-content:center;align-items:center;z-index:2000;" onclick="closeImg()">
+
+<img id="modalImg" style="max-width:90%;max-height:90%;">
+
+</div>
 
 <!-- REVIEWS -->
 
@@ -510,6 +557,42 @@ var url="https://wa.me/916265269620?text="
 +"Shoot:"+message;
 
 window.open(url,'_blank');
+
+}
+
+<script>
+
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("show");
+}
+
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var message=document.getElementById("message").value;
+
+var url="https://wa.me/916265269620?text="
++"Name:"+name+"%0a"
++"Phone:"+phone+"%0a"
++"Shoot:"+message;
+
+window.open(url,'_blank');
+
+}
+
+/* PHOTO FULL SCREEN */
+
+function openImg(img){
+
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=img.src;
+
+}
+
+function closeImg(){
+
+document.getElementById("imgModal").style.display="none";
 
 }
 
