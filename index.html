@@ -4,43 +4,19 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
 <title>Vaibhav Creation | Digital Marketing Platform</title>
 
 <meta name="description" content="Vaibhav Creation - Professional Wedding Videographer in Zirapur. Cinematic Wedding Films, Pre Wedding Shoot, Reels & Creative Editing.">
 
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-  
-.services{
-display:flex;
-justify-content:center;
-margin-top:40px;
-}
 
-.service-box{
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:15px;
-backdrop-filter:blur(6px);
-width:350px;
-}
+/* RESET */
 
-.service-box ul{
-list-style:none;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-text-align:left;
-}
-
-
-.service-box li{
-padding:8px 0;
-font-size:18px;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-  
 *{
 margin:0;
 padding:0;
@@ -48,85 +24,71 @@ box-sizing:border-box;
 font-family:Arial;
 }
 
-  
-/* ANIMATED BACKGROUND */
+/* BODY */
 
 body{
-
-<div class="navbar">
-
-<div class="logo">Vaibhav Creation</div>
-
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<ul class="nav-links">
-
-<li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#reels">Reels</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#location">Location</a></li>
-
-</ul>
-
-</div>
-
-  
-color:white;
-background:linear-gradient(-45deg,#000000,#1a0033,#330033,#000000);
-background-size:400% 400%;
-animation:gradient 10s ease infinite;
+color:#111;
+background:linear-gradient(135deg,#f5f7fa,#e4ecf7);
 }
 
-@keyframes gradient{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+z-index:1000;
 }
 
-<!-- NAVBAR -->
+.nav-links{
+display:flex;
+list-style:none;
+}
 
-<div class="navbar">
+.nav-links li{
+margin-left:20px;
+}
 
-<ul>
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-size:18px;
+}
 
-<li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#packages">Packages</a></li>
-<li><a href="#reels">Reels</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#location">Location</a></li>
-
-</ul>
-
-</div>
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding:220px 20px;
+padding:200px 20px 120px;
 }
 
 .logo{
-font-size:80px;
-font-weight:bold;
-letter-spacing:8px;
-
+font-family:'Cinzel',serif;
+font-size:70px;
+letter-spacing:6px;
 background:linear-gradient(45deg,#ff0066,#ff6600);
 -webkit-background-clip:text;
 color:transparent;
-
-text-shadow:0 0 30px rgba(255,0,100,0.5);
 }
 
 .tagline{
 font-size:22px;
 margin-top:10px;
-opacity:0.9;
 }
+
+/* SOCIAL ICONS */
 
 .social-icons{
 display:flex;
@@ -142,31 +104,79 @@ transition:0.3s;
 }
 
 .social-icons a:hover{
-transform:scale(1.3);
+transform:scale(1.2);
 }
+
+/* BUTTON */
 
 .button{
 display:inline-block;
 margin-top:30px;
-padding:15px 35px;
+padding:14px 30px;
 background:#ff0066;
 border-radius:40px;
 text-decoration:none;
 color:white;
 font-size:18px;
-transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.1);
 background:#ff3385;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:70px 20px;
 text-align:center;
+}
+
+/* SERVICES */
+
+.services{
+display:flex;
+justify-content:center;
+margin-top:40px;
+}
+
+.service-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:350px;
+}
+
+.service-box ul{
+list-style:none;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+text-align:left;
+}
+
+/* PRICING */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.price-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.price{
+font-size:30px;
+color:#ff0066;
+margin:10px 0;
 }
 
 /* REELS */
@@ -178,7 +188,6 @@ gap:20px;
 margin-top:40px;
 }
 
-  
 /* REVIEWS */
 
 .reviews{
@@ -189,10 +198,10 @@ margin-top:40px;
 }
 
 .review{
-background:rgba(255,255,255,0.08);
+background:white;
 padding:25px;
 border-radius:15px;
-backdrop-filter:blur(6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* FORM */
@@ -215,121 +224,53 @@ border-radius:25px;
 cursor:pointer;
 }
 
-<div class="social-icons">
+/* FLOATING BUTTONS */
 
-<a href="https://www.instagram.com/vaibhav_creation227?igsh=MWJtZXlwajRqMHY2Yw==" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/1DsdN5V1H5/" target="_blank">
-<i class="fab fa-facebook"></i>
-</a>
-
-<a href="https://www.youtube.com/@VaibhavCreation227" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-
-<a href="https://wa.me/916265269620" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-</div>
-
-/* PRICING SECTION */
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-max-width:1100px;
-margin-left:auto;
-margin-right:auto;
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+z-index:1000;
 }
 
-.price-box{
-background:rgba(255,255,255,0.08);
-padding:35px;
-border-radius:15px;
-backdrop-filter:blur(6px);
+.instagram-float{
+position:fixed;
+bottom:90px;
+right:25px;
+background:#E1306C;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+z-index:1000;
 }
-
-.price-box h3{
-font-size:26px;
-margin-bottom:10px;
-}
-
-.price{
-font-size:32px;
-color:#ff0066;
-margin:15px 0;
-}
-
-.price-box ul{
-list-style:none;
-}
-
-.price-box li{
-padding:6px 0;
-font-size:16px;
-}
-
 
 /* FOOTER */
 
 footer{
-padding:30px;
+padding:25px;
 text-align:center;
-background:rgba(0,0,0,0.6);
+background:#111;
+color:white;
 margin-top:40px;
 }
 
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-background:black;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-z-index:1000;
-}
-
-.nav-links{
-display:flex;
-list-style:none;
-}
-
-.nav-links li{
-margin-left:20px;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-font-size:18px;
-}
-
-.menu-toggle{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
 
 .nav-links{
 display:none;
 flex-direction:column;
-background:black;
 position:absolute;
 top:60px;
 right:0;
+background:white;
 width:200px;
 padding:20px;
 }
@@ -344,54 +285,33 @@ display:block;
 
 }
 
-/* FLOATING WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:32px;
-padding:15px;
-border-radius:50%;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
-z-index:1000;
-transition:0.3s;
-}
-
-.whatsapp-float:hover{
-transform:scale(1.15);
-background:#1ebe5d;
-}
-
-/* FLOATING INSTAGRAM */
-
-.instagram-float{
-position:fixed;
-bottom:90px;
-right:25px;
-background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-color:white;
-font-size:30px;
-padding:14px;
-border-radius:50%;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
-z-index:1000;
-transition:0.3s;
-}
-
-.instagram-float:hover{
-transform:scale(1.15);
-}
-
 </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div style="font-weight:bold;">VC</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#reels">Reels</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#location">Location</a></li>
+
+</ul>
+
+</div>
 
 <!-- HERO -->
 
@@ -407,27 +327,19 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 
 <div class="social-icons">
 
-<a href="https://www.instagram.com/vaibhav_creation227">
-📸
-</a>
+<a href="https://www.instagram.com/vaibhav_creation227">📸</a>
 
-<a href="https://www.facebook.com/share/1DsdN5V1H5/">
-📘
-</a>
+<a href="https://www.facebook.com/share/1DsdN5V1H5/">📘</a>
 
-<a href="https://wa.me/916265269620">
-💬
-</a>
+<a href="https://wa.me/916265269620">💬</a>
 
-<a href="https://www.youtube.com/@VaibhavCreation227">
-▶️
-</a>
+<a href="https://www.youtube.com/@VaibhavCreation227">▶️</a>
 
 </div>
 
 </section>
 
-  <!-- OUR SERVICES -->
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -460,8 +372,7 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 
 </section>
 
-
-<!-- PRICING -->
+<!-- PACKAGES -->
 
 <section id="packages">
 
@@ -470,48 +381,23 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 <div class="pricing">
 
 <div class="price-box">
-
 <h3>Video Editing</h3>
-
 <div class="price">₹500+</div>
-
-<ul>
-<li>🎬 Reel Editing</li>
-<li>🎞 Cinematic Effects</li>
-<li>🎵 Music Sync</li>
-<li>⚡ Fast Delivery</li>
-</ul>
-
 </div>
-  
+
 <div class="price-box">
 <h3>Basic Reel Shoot</h3>
 <div class="price">₹1,999</div>
-<ul>
-<li>🎬 1 Shoot + Edit Reel</li>
-<li>📸 Basic Shoot</li>
-<li>🎞 Simple Editing</li>
-</ul>
 </div>
 
 <div class="price-box">
 <h3>Wedding Package</h3>
 <div class="price">₹15,000</div>
-<ul>
-<li>🎥 Full Wedding Coverage</li>
-<li>🎬 Cinematic Video</li>
-<li>📸 Candid Shots</li>
-</ul>
 </div>
 
 <div class="price-box">
 <h3>Pre Wedding Shoot</h3>
 <div class="price">₹7,999</div>
-<ul>
-<li>💑 Couple Shoot</li>
-<li>🎬 Cinematic Reel</li>
-<li>📸 Photo Session</li>
-</ul>
 </div>
 
 </div>
@@ -527,19 +413,19 @@ Cinematic Wedding Films • Pre Wedding • Creative Reels
 <div class="gallery">
 
 <blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DRrvSmaE2cv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote>
+data-instgrm-permalink="https://www.instagram.com/reel/DRrvSmaE2cv/"></blockquote>
 
 <blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DVi2sDaDBux/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote>
+data-instgrm-permalink="https://www.instagram.com/reel/DVi2sDaDBux/"></blockquote>
 
 <blockquote class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote>
+data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquote>
 
 </div>
 
 </section>
 
-<!-- CLIENT REVIEWS -->
+<!-- REVIEWS -->
 
 <section id="reviews">
 
@@ -547,83 +433,50 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/?utm_source=i
 
 <div class="reviews">
 
-<div class="review">
-⭐️⭐️⭐️⭐️⭐️  
-Amazing wedding shoot experience!
-</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Amazing wedding shoot experience!</div>
 
-<div class="review">
-⭐️⭐️⭐️⭐️⭐️  
-Best videographer in Zirapur.
-</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Best videographer in Zirapur.</div>
 
-<div class="review">
-⭐️⭐️⭐️⭐️⭐️  
-Professional editing and creative reels.
-</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Professional editing and creative reels.</div>
 
 </div>
 
 </section>
 
-<!-- WHATSAPP FORM -->
+<!-- CONTACT -->
 
-<section id="contact"> 
+<section id="contact">
 
 <h2>Book Your Shoot</h2>
 
 <div class="form">
 
 <input type="text" id="name" placeholder="Your Name">
-
 <input type="text" id="phone" placeholder="Phone Number">
-
 <textarea id="message" placeholder="Shoot Details"></textarea>
-
-<br>
 
 <button onclick="sendWhatsApp()">Send on WhatsApp</button>
 
 </div>
 
 </section>
-  
+
+<!-- LOCATION -->
 
 <section id="location">
 
 <h2>Our Location</h2>
 
-<iframe 
-src="https://www.google.com/maps?q=Zirapur%20Madhya%20Pradesh&output=embed"
-width="90%" 
-height="350"
-style="border:0; border-radius:15px;"
-loading="lazy">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Zirapur%20Madhya%20Pradesh&output=embed"
+width="90%" height="350" style="border-radius:15px;border:0;"></iframe>
 
 <br><br>
 
 <h3>Vaibhav Creation</h3>
 
-<p>
-📍 Zirapur, Rajgarh District, Madhya Pradesh 465691
-</p>
-
-<br>
-
-<a href="tel:7898399744" 
-style="background:#28a745;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;margin-right:10px;">
-📞 Call Now
-</a>
-
-<a href="https://www.google.com/maps?q=Zirapur%20Madhya%20Pradesh" target="_blank"
-style="background:#007bff;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;">
-🧭 Get Directions
-</a>
+<p>📍 Zirapur, Rajgarh District, Madhya Pradesh</p>
 
 </section>
-
-  
 
 <footer>
 
@@ -631,32 +484,11 @@ style="background:#007bff;color:white;padding:12px 20px;border-radius:8px;text-d
 
 </footer>
 
-<script>
-
-function sendWhatsApp(){
-
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var message=document.getElementById("message").value;
-
-var url="https://wa.me/916265269620?text="
-+"Name: "+name+"%0a"
-+"Phone: "+phone+"%0a"
-+"Shoot Details: "+message;
-
-window.open(url,'_blank');
-
-}
-
-</script>
-
-<script async src="//www.instagram.com/embed.js"></script>
-
-<a href="https://www.instagram.com/vaibhav_creation227" class="instagram-float" target="_blank">
+<a href="https://www.instagram.com/vaibhav_creation227" class="instagram-float">
 <i class="fab fa-instagram"></i>
 </a>
 
-<a href="https://wa.me/916265209620?text=Hello%20Vaibhav%20Creation,%20I%20am%20interested%20in%20your%20video%20shoot%20services.%20Please%20share%20details." class="whatsapp-float" target="_blank">
+<a href="https://wa.me/916265269620" class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -666,7 +498,24 @@ function toggleMenu(){
 document.querySelector(".nav-links").classList.toggle("show");
 }
 
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var message=document.getElementById("message").value;
+
+var url="https://wa.me/916265269620?text="
++"Name:"+name+"%0a"
++"Phone:"+phone+"%0a"
++"Shoot:"+message;
+
+window.open(url,'_blank');
+
+}
+
 </script>
+
+<script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 </html>
