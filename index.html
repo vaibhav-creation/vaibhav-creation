@@ -42,32 +42,41 @@ margin:auto;
 }
 
 #poster-designs h2{
-text-align:center;
 font-size:34px;
 margin-bottom:30px;
 }
 
 #poster-designs h3{
-margin:40px 0 20px;
+margin:50px 0 20px;
+font-size:24px;
+border-bottom:2px solid #ff4d6d;
+display:inline-block;
+padding-bottom:5px;
 }
+
+/* Gallery */
 
 .poster-gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
+/* Images */
+
 .poster-gallery img{
 width:100%;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 transition:0.3s;
+cursor:pointer;
 }
-  
+
+/* Hover Effect */
+
 .poster-gallery img:hover{
 transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* HAPPY CUSTOMERS HEADING */
