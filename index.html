@@ -994,5 +994,26 @@ counters.forEach(counter => {
 
 <script async src="https://www.instagram.com/embed.js"></script>
 
+<script>
+
+function sendWhatsApp(){
+
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var message = document.getElementById("message").value;
+
+var text = "Hello Vaibhav Creation %0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Details: " + message;
+
+var url = "https://wa.me/919876543210?text=" + text;
+
+window.open(url);
+
+}
+
+</script>
+
 </body>
 </html>
