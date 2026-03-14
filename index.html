@@ -809,19 +809,19 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquot
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="booking">
 
 <h2>Book Your Shoot</h2>
 
-<div class="form">
-
 <input type="text" id="name" placeholder="Your Name">
+
 <input type="text" id="phone" placeholder="Phone Number">
-<textarea id="message" placeholder="Shoot Details"></textarea>
+
+<input type="text" id="date" placeholder="Event Date">
+
+<textarea id="details" placeholder="Shoot Details"></textarea>
 
 <button onclick="sendWhatsApp()">Send on WhatsApp</button>
-
-</div>
 
 </section>
 
@@ -942,6 +942,29 @@ clearInterval(interval);
 }
 
 },20);
+
+<script>
+
+function sendWhatsApp(){
+
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var date = document.getElementById("date").value;
+var details = document.getElementById("details").value;
+
+var message = "Hello Vaibhav Creation,%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Event Date: " + date + "%0A"
++ "Details: " + details;
+
+var whatsappURL = "https://wa.me/916265269620?text=" + message;
+
+window.open(whatsappURL, "_blank");
+
+}
+
+</script>
 
 /* DARK MODE */
 
