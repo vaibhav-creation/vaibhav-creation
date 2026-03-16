@@ -445,6 +445,30 @@ text-decoration:underline;
 
 @media (max-width:768px){
 
+/* MOBILE MENU */
+
+.menu-toggle{
+display:block;
+font-size:28px;
+cursor:pointer;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+}
+
+.nav-links a{
+padding:15px;
+display:block;
+border-bottom:1px solid #eee;
+}
+
 .hero{
 padding:150px 15px 80px;
 }
@@ -524,6 +548,7 @@ color:white;
 <img src="logo.png" alt="Vaibhav Creation Logo">
 </div>
 
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <ul class="nav-links">
 <li><a href="#">Home</a></li>
@@ -1158,6 +1183,22 @@ var text = "Hello Vaibhav Creation %0A"
 var url = "https://wa.me/919876543210?text=" + text;
 
 window.open(url);
+
+}
+
+</script>
+
+<script>
+
+function toggleMenu(){
+
+var menu = document.getElementById("menu");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
 
 }
 
