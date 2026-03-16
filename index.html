@@ -445,12 +445,20 @@ text-decoration:underline;
 
 @media (max-width:768px){
 
-/* MOBILE MENU */
+/* MENU TOGGLE */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
 
 .menu-toggle{
 display:block;
-font-size:28px;
-cursor:pointer;
 }
 
 .nav-links{
@@ -463,10 +471,16 @@ width:100%;
 background:white;
 }
 
-.nav-links a{
+.nav-links li{
 padding:15px;
-display:block;
+text-align:center;
 border-bottom:1px solid #eee;
+}
+
+.nav-links a{
+display:block;
+}
+
 }
 
 .hero{
@@ -540,6 +554,7 @@ color:white;
 </head> 
 
 <body>
+
 <!-- NAVBAR -->
 
 <div class="navbar">
@@ -550,7 +565,7 @@ color:white;
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<ul class="nav-links">
+<ul class="nav-links" id="menu">
 <li><a href="#">Home</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#packages">Packages</a></li>
@@ -559,7 +574,6 @@ color:white;
 <li><a href="#contact">Contact</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#privacy">Privacy Policy</a></li>
-<li><a href="#contact">Contact</a></li>
 </ul>
 
 </div>
@@ -1194,10 +1208,10 @@ function toggleMenu(){
 
 var menu = document.getElementById("menu");
 
-if(menu.style.display === "flex"){
+if(menu.style.display === "block"){
 menu.style.display = "none";
 }else{
-menu.style.display = "flex";
+menu.style.display = "block";
 }
 
 }
