@@ -886,12 +886,12 @@ data-instgrm-permalink="https://www.instagram.com/reel/DUPyclukxZ1/"></blockquot
 <h2>Book Your Shoot</h2>
 
 <input type="text" id="name" placeholder="Your Name">
-
+  
 <input type="text" id="phone" placeholder="Phone Number">
-
-<input type="text" id="date" placeholder="Event Date">
-
-<textarea id="details" placeholder="Shoot Details"></textarea>
+  
+<input type="date" id="date">
+  
+<textarea id="message" placeholder="Shoot Details"></textarea>
 
 <button onclick="sendWhatsApp()">Send on WhatsApp</button>
 
@@ -1187,21 +1187,22 @@ function sendWhatsApp(){
 
 var name = document.getElementById("name").value;
 var phone = document.getElementById("phone").value;
+var date = document.getElementById("date").value;
 var message = document.getElementById("message").value;
 
-var text = "Hello Vaibhav Creation %0A"
-+ "Name: " + name + "%0A"
-+ "Phone: " + phone + "%0A"
-+ "Details: " + message;
+var whatsappMessage =
+"Name: " + name + "%0A" +
+"Phone: " + phone + "%0A" +
+"Event Date: " + date + "%0A" +
+"Shoot Details: " + message;
 
-var url = "https://wa.me/919876543210?text=" + text;
+var url = "https://wa.me/916265269620?text=" + whatsappMessage;
 
-window.open(url);
+window.open(url,"_blank");
 
 }
 
 </script>
-
 <script>
 
 function toggleMenu(){
